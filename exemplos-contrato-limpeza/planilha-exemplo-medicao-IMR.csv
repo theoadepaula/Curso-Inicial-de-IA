@@ -1,0 +1,5 @@
+Servico,Indicador,Circuitos_Planejados,Circuitos_Abaixo_Meta,Meta_Execucao
+P1 - Coleta Convencional,I03,200,18,90%
+P2 - Coleta Seletiva,I04,120,9,90%
+P5 - Varricao Manual,I05,80,3,95%
+P6 - Varricao Mecanizada,I05,60,5,95%

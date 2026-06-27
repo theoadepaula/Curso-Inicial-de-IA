@@ -1,0 +1,15 @@
+# OS / OneDrive
+Thumbs.db
+desktop.ini
+.DS_Store
+.claude
+
+# Temporários
+*.tmp
+~$*
+
+# Planejamento/condução — mantidos só localmente, fora do repositório público
+CONTEXTO-PROJETO.md
+01-Estrutura-Curso.md
+02-Slides.md
+03-Roteiro-Apresentador.md
