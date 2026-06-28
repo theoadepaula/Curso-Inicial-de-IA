@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso Inicial de IA — Gestão e Fiscalização de Contratos Públicos</title>
+<meta name="description" content="Materiais abertos de um curso de introdução ao uso responsável de IA no serviço público, com foco em contratos.">
+<style>
+  :root{
+    --teal:#126e63; --teal-d:#0c4a43; --amber:#e6b03a;
+    --ink:#1f2a2e; --muted:#5b6670; --bg:#f7faf9; --card:#ffffff; --line:#e1ebe8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--teal);text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-weight:700;color:var(--teal-d);font-size:1.05rem}
+  .brand span{color:var(--teal)}
+  .nav-links a{margin-left:18px;color:var(--muted);font-size:.95rem}
+  .nav-links a:hover{color:var(--teal)}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-d) 100%);color:#fff;
+    padding:84px 0 92px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--amber)}
+  .hero h1{font-size:2.7rem;line-height:1.15;max-width:18ch;margin-bottom:16px}
+  .hero p{font-size:1.2rem;color:#d6ebe6;max-width:60ch;margin-bottom:30px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:600;font-size:1rem}
+  .btn-primary{background:var(--amber);color:#3a2c00}
+  .btn-primary:hover{filter:brightness(1.06)}
+  .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+  .btn-ghost:hover{background:rgba(255,255,255,.2)}
+
+  /* sections */
+  section{padding:62px 0}
+  h2{font-size:1.8rem;color:var(--teal-d);margin-bottom:8px}
+  .lead{color:var(--muted);max-width:70ch;margin-bottom:30px}
+  .callout{background:#eef5f3;border-left:5px solid var(--teal);border-radius:8px;
+    padding:18px 22px;margin-top:24px;font-size:1.08rem}
+  .callout b{color:var(--teal-d)}
+
+  /* grids */
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;
+    transition:transform .15s,box-shadow .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(18,110,99,.10);border-color:#cfe0db}
+  .card h3{font-size:1.06rem;color:var(--teal-d);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  .card p{color:var(--muted);font-size:.94rem}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--teal);background:#e7f1ef;border-radius:999px;padding:3px 10px;margin-bottom:10px}
+
+  .q{counter-increment:q;position:relative;padding-left:46px}
+  .q::before{content:counter(q);position:absolute;left:0;top:2px;width:32px;height:32px;border-radius:50%;
+    background:var(--teal);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+  #perguntas .grid{counter-reset:q}
+
+  .alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  .dl{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:16px 20px}
+  .dl .ic{font-size:1.7rem}
+  .dl .meta{flex:1}
+  .dl .meta strong{display:block;color:var(--teal-d)}
+  .dl .meta span{color:var(--muted);font-size:.88rem}
+  .dl a{font-weight:600;white-space:nowrap}
+
+  video{width:100%;border-radius:12px;border:1px solid var(--line);background:#000}
+  .vcap{color:var(--muted);font-size:.9rem;margin-top:8px}
+
+  .princ{display:flex;gap:14px;align-items:flex-start}
+  .princ .ic{font-size:1.5rem;line-height:1}
+  .princ b{color:var(--teal-d)}
+
+  footer{background:var(--teal-d);color:#cfe0db;padding:40px 0;text-align:center;font-size:.92rem}
+  footer a{color:#fff;text-decoration:underline}
+  footer .mt{margin-top:10px;color:#9fc5bd;font-size:.85rem}
+
+  @media(max-width:760px){
+    .hero h1{font-size:2rem}.g2,.g3{grid-template-columns:1fr}
+    .nav-links{display:none}.hero{padding:60px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">🤖 Curso Inicial de <span>IA</span></div>
+      <div class="nav-links">
+        <a href="#materiais">Materiais</a>
+        <a href="#baixar">Baixar</a>
+        <a href="#videos">Vídeos</a>
+        <a href="https://github.com/theoadepaula/Curso-Inicial-de-IA">GitHub</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>IA na prática para a gestão e fiscalização de contratos públicos</h1>
+    <p>Materiais abertos de um curso de introdução ao uso responsável de inteligência artificial no serviço público — para consultar, baixar e compartilhar.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="Apostila-Participante.pdf">📄 Baixar a apostila (PDF)</a>
+      <a class="btn btn-ghost" href="#materiais">Ver os materiais</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Sobre</h2>
+    <p class="lead">Para servidores públicos que já usam IA de forma superficial e querem aproveitar melhor as ferramentas — com segurança, método e senso crítico. Os exemplos usam documentos públicos reais de uma licitação de limpeza urbana para mostrar a IA aplicada ao dia a dia da fiscalização.</p>
+    <div class="callout">
+      <b>Ideia central:</b> a IA é uma ferramenta de apoio — ela <b>não substitui</b> o servidor.
+      Quem orienta a IA, revisa e assina é o profissional. <b>O dever de pensar não se delega.</b>
+    </div>
+  </div>
+</section>
+
+<section id="perguntas" class="alt">
+  <div class="wrap">
+    <h2>O que os materiais respondem</h2>
+    <p class="lead">As quatro dúvidas mais comuns de quem começa a usar IA no trabalho.</p>
+    <div class="grid g2">
+      <div class="card q"><p>Todas as IAs são iguais? Qual usar para cada tarefa?</p></div>
+      <div class="card q"><p>Até onde posso subir documentos do trabalho na IA? É seguro?</p></div>
+      <div class="card q"><p>Como ser específico o suficiente nos comandos (prompts)?</p></div>
+      <div class="card q"><p>Como tornar a IA um hábito diário no trabalho?</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="materiais">
+  <div class="wrap">
+    <h2>Materiais disponíveis</h2>
+    <p class="lead">Clique para abrir cada material (renderizado no GitHub).</p>
+    <div class="grid g3">
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/04-Guia-Seguranca-LGPD.md"><h3>🔒 Segurança e LGPD</h3><p>O que pode e o que não pode subir na IA.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/05-Biblioteca-Prompts.md"><h3>🧰 Biblioteca de Prompts</h3><p>Prompts prontos para contratos.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/06-Tabela-Comparativa-IAs.md"><h3>📊 Comparativo de IAs</h3><p>Qual ferramenta usar para cada tarefa.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/07-Prompts-Exemplos-Nova-Licitacao.md"><h3>📑 Prompts da licitação</h3><p>Prompts sobre documentos reais.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/08-Demo-Prompt-Ruim-vs-Bom.md"><h3>⚖️ Prompt ruim × bom</h3><p>Demonstração, com exemplo de alucinação.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/09-Uso-Responsavel-Sinais-de-Alerta.md"><h3>🚦 Uso responsável</h3><p>Sinais de alerta e boas práticas.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/10-Glossario-e-Mitos.md"><h3>📖 Glossário e mitos</h3><p>Termos essenciais, mitos e RAG.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/11-Primeiros-Passos-e-Custo.md"><h3>🚀 Primeiros passos</h3><p>Como começar e grátis × pago.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/12-Casos-Avancados-Contratos.md"><h3>🧩 Casos avançados</h3><p>Planilhas, fluxo fim-a-fim, persona.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/13-Kit-Engajamento.md"><h3>🎲 Kit de engajamento</h3><p>Exercícios, quiz e autoavaliação.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/14-Material-Para-Levar.md"><h3>🎒 Material para levar</h3><p>Plano de 7 dias + cola + FAQ.</p></a>
+      <a class="card" href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/15-Fontes-Oficiais.md"><h3>🏛️ Fontes oficiais</h3><p>Referências do Núcleo de IA (SGD/MGI).</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="baixar" class="alt">
+  <div class="wrap">
+    <h2>Para baixar e usar</h2>
+    <p class="lead">Arquivos prontos para imprimir, apresentar ou repassar à equipe.</p>
+    <div class="grid g2">
+      <div class="dl"><div class="ic">📄</div><div class="meta"><strong>Apostila do participante</strong><span>Resumo de tudo, em PDF</span></div><a href="Apostila-Participante.pdf">Baixar</a></div>
+      <div class="dl"><div class="ic">🖥️</div><div class="meta"><strong>Apresentação (PPTX)</strong><span>30 slides, com vídeos embutidos</span></div><a href="Apresentacao-IA-Contratos.pptx">Baixar</a></div>
+      <div class="dl"><div class="ic">📁</div><div class="meta"><strong>Documentos de exemplo</strong><span>Edital, TRs, IMR e Matriz (públicos)</span></div><a href="https://github.com/theoadepaula/Curso-Inicial-de-IA/tree/main/exemplos-contrato-limpeza">Abrir</a></div>
+      <div class="dl"><div class="ic">📚</div><div class="meta"><strong>Repositório completo</strong><span>Todos os arquivos no GitHub</span></div><a href="https://github.com/theoadepaula/Curso-Inicial-de-IA">Abrir</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="wrap">
+    <h2>Vídeos</h2>
+    <p class="lead">Vídeos curtos e informativos gerados a partir das fontes do curso.</p>
+    <div class="grid g2">
+      <div>
+        <video controls preload="metadata"><source src="videos-notebooklm/01-Seguranca-O-que-nao-colocar-na-IA.mp4" type="video/mp4"></video>
+        <p class="vcap">O que observar e não inserir nas IAs (segurança e dados).</p>
+      </div>
+      <div>
+        <video controls preload="metadata"><source src="videos-notebooklm/02-Usos-no-dia-a-dia.mp4" type="video/mp4"></video>
+        <p class="vcap">Usos no dia a dia: trabalho, casa e estudos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Princípios</h2>
+    <p class="lead">O que guia todos os materiais.</p>
+    <div class="grid g2">
+      <div class="princ"><div class="ic">🎯</div><p><b>Não existe "a melhor IA"</b> — existe a melhor para cada tarefa.</p></div>
+      <div class="princ"><div class="ic">🔒</div><p><b>Cuidado com dados</b> — anonimize o sensível; configure a privacidade.</p></div>
+      <div class="princ"><div class="ic">✍️</div><p><b>Prompt importa</b> — seja específico (Contexto · Papel · Formato · Especificidade).</p></div>
+      <div class="princ"><div class="ic">✅</div><p><b>Confira sempre</b> — a IA erra e inventa; a responsabilidade é do servidor.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Distribuído sob a licença <a href="https://github.com/theoadepaula/Curso-Inicial-de-IA/blob/main/LICENSE">MIT</a> · <a href="https://github.com/theoadepaula/Curso-Inicial-de-IA">Ver no GitHub</a></div>
+    <div class="mt">Material educativo. Documentos da licitação são públicos. Para que o bom fiscal faça mais e melhor — com IA como apoio, nunca como substituta.</div>
+  </div>
+</footer>
+
+</body>
+</html>
