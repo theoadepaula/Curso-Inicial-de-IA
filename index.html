@@ -13,7 +13,8 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
-    color:var(--ink);background:var(--bg);line-height:1.6}
+    color:var(--ink);background:var(--bg);line-height:1.6;
+    display:flex;flex-direction:column;min-height:100vh;overflow-x:hidden}
   a{color:var(--teal);text-decoration:none}
   .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 
@@ -74,14 +75,14 @@
   .dl .meta span{color:var(--muted);font-size:.88rem}
   .dl a{font-weight:600;white-space:nowrap}
 
-  video{width:100%;border-radius:12px;border:1px solid var(--line);background:#000}
+  video{width:100%;aspect-ratio:16/9;display:block;border-radius:12px;border:1px solid var(--line);background:#000}
   .vcap{color:var(--muted);font-size:.9rem;margin-top:8px}
 
   .princ{display:flex;gap:14px;align-items:flex-start}
   .princ .ic{font-size:1.5rem;line-height:1}
   .princ b{color:var(--teal-d)}
 
-  footer{background:var(--teal-d);color:#cfe0db;padding:40px 0;text-align:center;font-size:.92rem}
+  footer{background:var(--teal-d);color:#cfe0db;padding:40px 0;text-align:center;font-size:.92rem;margin-top:auto}
   footer a{color:#fff;text-decoration:underline}
   footer .mt{margin-top:10px;color:#9fc5bd;font-size:.85rem}
 
