@@ -18,6 +18,14 @@
    com precedentes **inexistentes** gerados pelo ChatGPT (caso *Mata v. Avianca*). Houve novos
    casos semelhantes depois. Mesmo erro possível na administração: citar um artigo de lei que
    não existe.
+4. **Uso passivo** — só pedir um resumo e ler dá uma *falsa sensação* de aprendizado/domínio: a
+   informação é esquecida rápido. É preciso engajar — perguntar, contestar e concluir você mesmo.
+
+> **Analogia útil:** como no esporte, **você é o atleta** (faz o esforço) e a **IA é o treinador**
+> (apoia, organiza e aponta caminhos). Quem não treina não rende — a ferramenta sozinha não basta.
+>
+> *(Pontos do "uso passivo" e da analogia atleta × treinador inspirados em vídeo sobre aprender
+> com IA, incluído como fonte no notebook do curso no NotebookLM.)*
 
 ## Quadro: SINAIS DE ALERTA de uso sem reflexão
 > Use para se autoavaliar e para revisar trabalhos da equipe.

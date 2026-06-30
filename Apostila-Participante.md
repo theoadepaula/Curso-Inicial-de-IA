@@ -12,6 +12,9 @@ prática depois do encontro. A ideia central percorre todo o material:
 > **A IA é uma ferramenta de apoio. Ela não substitui o servidor.** Quem orienta a IA, revisa
 > e assina é você. O dever de pensar não se delega.
 
+Uma analogia ajuda: **como no esporte, você é o atleta (faz o esforço) e a IA é o treinador**
+(apoia, organiza e aponta caminhos). O resultado depende de você fazer o trabalho.
+
 ---
 
 # 1. O que é IA generativa (e o que não é)
@@ -111,8 +114,13 @@ Riscos do uso sem reflexão:
 
 - **Viés de automação:** aceitar a resposta só porque "a máquina disse".
 - **Atrofia do critério:** quem delega tudo perde a capacidade de analisar e decidir.
+- **Uso passivo:** só pedir um resumo e ler dá *falsa sensação* de aprender/dominar o assunto —
+  é preciso engajar: perguntar, contestar e concluir você mesmo.
 - **Alucinação:** a IA inventa fatos e leis. Em 2023, advogados foram multados por citar
   jurisprudência inexistente gerada por IA.
+
+> Pontos do "uso passivo" e da analogia atleta × treinador inspirados em vídeo sobre **aprender
+> com IA** (fonte do notebook do curso no NotebookLM).
 
 ## Sinais de que a IA foi usada sem reflexão
 
